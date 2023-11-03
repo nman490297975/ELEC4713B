@@ -1,24 +1,20 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 14.10.2023 15:10:01
-// Design Name: 
-// Module Name: tb_CNNA_SA
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
+/*------------------------------------------------------------------------------
+--  Series Adapter Testbench
+--
+--  Nicholas Manning, 490297975
+--
+------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------
+--  USYD Code Citation
+--
+--  I, Nicholas Manning, acknowledge that I was inspired by tutorials, forum posts and learning resources in writing and debugging this testbench and its logic.
+--
+------------------------------------------------------------------------------*/
+
+// I wrote the initial testbench. Niyana finished it off.
 
 module tb_CNNA_SA;
 

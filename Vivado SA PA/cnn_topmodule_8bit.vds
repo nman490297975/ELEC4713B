@@ -1,0 +1,971 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Mon Oct 30 15:24:41 2023
+# Process ID: 10067
+# Current directory: /home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.runs/sa11bit_1
+# Command line: vivado -log cnn_topmodule.vds -stack 2000 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cnn_topmodule.tcl
+# Log file: /home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.runs/sa11bit_1/cnn_topmodule.vds
+# Journal file: /home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.runs/sa11bit_1/vivado.jou
+# Running On: develop-Z370M-D3H, OS: Linux, CPU Frequency: 4299.996 MHz, CPU Physical cores: 6, Host memory: 67358 MB
+#-----------------------------------------------------------
+source cnn_topmodule.tcl -notrace
+Command: synth_design -top cnn_topmodule -part xczu28dr-ffvg1517-2-e -retiming -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu28dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu28dr'
+INFO: [Common 17-86] Your Synthesis license expires in 29 day(s)
+INFO: [Device 21-403] Loading part xczu28dr-ffvg1517-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10203
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 5762.871 ; gain = 336.801 ; free physical = 40752 ; free virtual = 59127
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cnn_topmodule' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/imports/new/cnn_topmodule.sv:90]
+INFO: [Synth 8-6157] synthesizing module 'neuron' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/imports/new/neuron.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'FPMult_11bit_WRAPPER' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit_WRAPPER.sv:23]
+INFO: [Synth 8-638] synthesizing module 'FPMult_11bit' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit.vhd:211]
+INFO: [Synth 8-3491] module 'IntMultiplier_comb_uid5' declared at '/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit.vhd:79' bound to instance 'SignificandMultiplication' of component 'IntMultiplier_comb_uid5' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit.vhd:255]
+INFO: [Synth 8-638] synthesizing module 'IntMultiplier_comb_uid5' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit.vhd:85]
+INFO: [Synth 8-3491] module 'DSPBlock_7x7_comb_uid9' declared at '/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit.vhd:42' bound to instance 'tile_0_mult' of component 'DSPBlock_7x7_comb_uid9' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit.vhd:119]
+INFO: [Synth 8-638] synthesizing module 'DSPBlock_7x7_comb_uid9' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'DSPBlock_7x7_comb_uid9' (0#1) [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'IntMultiplier_comb_uid5' (0#1) [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit.vhd:85]
+INFO: [Synth 8-3491] module 'IntAdder_12_comb_uid13' declared at '/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit.vhd:169' bound to instance 'RoundingAdder' of component 'IntAdder_12_comb_uid13' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit.vhd:275]
+INFO: [Synth 8-638] synthesizing module 'IntAdder_12_comb_uid13' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit.vhd:176]
+INFO: [Synth 8-256] done synthesizing module 'IntAdder_12_comb_uid13' (0#1) [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit.vhd:176]
+INFO: [Synth 8-226] default block is never used [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit.vhd:280]
+INFO: [Synth 8-256] done synthesizing module 'FPMult_11bit' (0#1) [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit.vhd:211]
+INFO: [Synth 8-6155] done synthesizing module 'FPMult_11bit_WRAPPER' (0#1) [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPMult_11bit_WRAPPER.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'FPADD_11bit_WRAPPER' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit_WRAPPER.sv:23]
+INFO: [Synth 8-638] synthesizing module 'FPADD_11bit' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:233]
+INFO: [Synth 8-3491] module 'RightShifterSticky7_by_max_9_comb_uid4' declared at '/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:43' bound to instance 'RightShifterComponent' of component 'RightShifterSticky7_by_max_9_comb_uid4' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:340]
+INFO: [Synth 8-638] synthesizing module 'RightShifterSticky7_by_max_9_comb_uid4' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'RightShifterSticky7_by_max_9_comb_uid4' (0#1) [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:50]
+INFO: [Synth 8-3491] module 'IntAdder_10_comb_uid6' declared at '/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:99' bound to instance 'fracAdder' of component 'IntAdder_10_comb_uid6' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:350]
+INFO: [Synth 8-638] synthesizing module 'IntAdder_10_comb_uid6' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'IntAdder_10_comb_uid6' (0#1) [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:106]
+INFO: [Synth 8-3491] module 'Normalizer_Z_11_11_11_comb_uid8' declared at '/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:134' bound to instance 'LZCAndShifter' of component 'Normalizer_Z_11_11_11_comb_uid8' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:356]
+INFO: [Synth 8-638] synthesizing module 'Normalizer_Z_11_11_11_comb_uid8' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'Normalizer_Z_11_11_11_comb_uid8' (0#1) [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:140]
+INFO: [Synth 8-3491] module 'IntAdder_13_comb_uid11' declared at '/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:191' bound to instance 'roundingAdder' of component 'IntAdder_13_comb_uid11' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:369]
+INFO: [Synth 8-638] synthesizing module 'IntAdder_13_comb_uid11' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:198]
+INFO: [Synth 8-256] done synthesizing module 'IntAdder_13_comb_uid11' (0#1) [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:198]
+INFO: [Synth 8-256] done synthesizing module 'FPADD_11bit' (0#1) [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit.vhd:233]
+INFO: [Synth 8-6155] done synthesizing module 'FPADD_11bit_WRAPPER' (0#1) [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/new/FPADD_11bit_WRAPPER.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'neuron' (0#1) [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/imports/new/neuron.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'relu_deriv' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/imports/new/relu_deriv.sv:26]
+INFO: [Synth 8-6155] done synthesizing module 'relu_deriv' (0#1) [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/imports/new/relu_deriv.sv:26]
+INFO: [Synth 8-6157] synthesizing module 'adder' [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/imports/new/adder.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (0#1) [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/imports/new/adder.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'cnn_topmodule' (0#1) [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/imports/new/cnn_topmodule.sv:90]
+WARNING: [Synth 8-6014] Unused sequential element l_reg was removed.  [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/sources_1/imports/new/cnn_topmodule.sv:256]
+WARNING: [Synth 8-7129] Port do_bp in module cnn_topmodule is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 5859.246 ; gain = 433.176 ; free physical = 40625 ; free virtual = 59002
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 5871.121 ; gain = 445.051 ; free physical = 40624 ; free virtual = 59002
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 5871.121 ; gain = 445.051 ; free physical = 40624 ; free virtual = 59002
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 6082.715 ; gain = 29.000 ; free physical = 40408 ; free virtual = 58785
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/constrs_1/new/timing11bit.xdc]
+Finished Parsing XDC File [/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.srcs/constrs_1/new/timing11bit.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 6649.246 ; gain = 0.000 ; free physical = 39949 ; free virtual = 58326
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 6665.090 ; gain = 15.844 ; free physical = 39943 ; free virtual = 58321
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:38 ; elapsed = 00:00:31 . Memory (MB): peak = 6665.090 ; gain = 1239.020 ; free physical = 39924 ; free virtual = 58301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu28dr-ffvg1517-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:38 ; elapsed = 00:00:31 . Memory (MB): peak = 6665.090 ; gain = 1239.020 ; free physical = 39924 ; free virtual = 58301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:31 . Memory (MB): peak = 6665.090 ; gain = 1239.020 ; free physical = 39924 ; free virtual = 58301
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'fpcs_reg' in module 'cnn_topmodule'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                S_FPIDLE |                   00000000000001 |                             0000
+           S_FPROP_CONV0 |                   00000000000010 |                             0001
+         S_FPROP_CONV0_b |                   00000000000100 |                             0010
+         S_FPROP_CONV0_s |                   00000000001000 |                             0011
+     S_FPROP_CONVADAPT_s |                   00000000010000 |                             0100
+     S_BPROP_CONVADAPT_d |                   00000000100000 |                             0101
+        S_BPROP_ACCUM_db |                   00000001000000 |                             0110
+       S_BPROP_ACCUM_dw0 |                   00000010000000 |                             0111
+       S_BPROP_ACCUM_dw1 |                   00000100000000 |                             1000
+       S_BPROP_ACCUM_dw2 |                   00001000000000 |                             1001
+       S_BPROP_ACCUM_dw3 |                   00010000000000 |                             1010
+       S_BPROP_ACCUM_dw4 |                   00100000000000 |                             1011
+       S_BPROP_ACCUM_dw5 |                   01000000000000 |                             1100
+                S_FPDONE |                   10000000000000 |                             1101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'fpcs_reg' using encoding 'one-hot' in module 'cnn_topmodule'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:43 ; elapsed = 00:00:36 . Memory (MB): peak = 6665.090 ; gain = 1239.020 ; free physical = 39902 ; free virtual = 58303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   3 Input   13 Bit       Adders := 1735  
+	   3 Input   12 Bit       Adders := 1728  
+	   3 Input   10 Bit       Adders := 1735  
+	   4 Input    6 Bit       Adders := 1728  
+	   3 Input    6 Bit       Adders := 1735  
+	   2 Input    5 Bit       Adders := 1735  
+	   3 Input    4 Bit       Adders := 1735  
++---XORs : 
+	   2 Input     10 Bit         XORs := 1735  
+	   2 Input      1 Bit         XORs := 3463  
++---Registers : 
+	               32 Bit    Registers := 2     
+	               13 Bit    Registers := 1159  
++---Muxes : 
+	  10 Input   32 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 1737  
+	  14 Input   14 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 4046  
+	   2 Input   11 Bit        Muxes := 6940  
+	   2 Input    9 Bit        Muxes := 6940  
+	   2 Input    7 Bit        Muxes := 1735  
+	   2 Input    4 Bit        Muxes := 3470  
+	   4 Input    2 Bit        Muxes := 5191  
+	   5 Input    2 Bit        Muxes := 1735  
+	   2 Input    1 Bit        Muxes := 583   
+	  14 Input    1 Bit        Muxes := 1     
+	  10 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port do_bp in module cnn_topmodule is either unconnected or has no load
+INFO: [Synth 8-3886] merging instance 'error[54].relu_deriv/out_reg[0]' (FDCE) to 'error[54].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[54].relu_deriv/out_reg[1]' (FDCE) to 'error[54].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[54].relu_deriv/out_reg[2]' (FDCE) to 'error[54].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[54].relu_deriv/out_reg[3]' (FDCE) to 'error[54].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[54].relu_deriv/out_reg[4]' (FDCE) to 'error[54].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[54].relu_deriv/out_reg[5]' (FDCE) to 'error[54].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[54].relu_deriv/out_reg[6]' (FDCE) to 'error[54].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[54].relu_deriv/out_reg[7]' (FDCE) to 'error[54].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[54].relu_deriv/out_reg[8]' (FDCE) to 'error[54].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[54].relu_deriv/out_reg[9]' (FDCE) to 'error[54].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[54].relu_deriv/out_reg[10]' (FDCE) to 'error[54].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[54].relu_deriv/out_reg[11]' (FDCE) to 'error[54].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[262].relu_deriv/out_reg[10]' (FDCE) to 'error[262].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[262].relu_deriv/out_reg[6]' (FDCE) to 'error[262].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[262].relu_deriv/out_reg[0]' (FDCE) to 'error[262].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[262].relu_deriv/out_reg[1]' (FDCE) to 'error[262].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[262].relu_deriv/out_reg[2]' (FDCE) to 'error[262].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[262].relu_deriv/out_reg[3]' (FDCE) to 'error[262].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[262].relu_deriv/out_reg[4]' (FDCE) to 'error[262].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[262].relu_deriv/out_reg[5]' (FDCE) to 'error[262].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[262].relu_deriv/out_reg[7]' (FDCE) to 'error[262].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[262].relu_deriv/out_reg[8]' (FDCE) to 'error[262].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[262].relu_deriv/out_reg[9]' (FDCE) to 'error[262].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[262].relu_deriv/out_reg[11]' (FDCE) to 'error[262].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[36].relu_deriv/out_reg[10]' (FDCE) to 'error[36].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[36].relu_deriv/out_reg[6]' (FDCE) to 'error[36].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[36].relu_deriv/out_reg[0]' (FDCE) to 'error[36].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[36].relu_deriv/out_reg[1]' (FDCE) to 'error[36].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[36].relu_deriv/out_reg[2]' (FDCE) to 'error[36].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[36].relu_deriv/out_reg[3]' (FDCE) to 'error[36].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[36].relu_deriv/out_reg[4]' (FDCE) to 'error[36].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[36].relu_deriv/out_reg[5]' (FDCE) to 'error[36].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[36].relu_deriv/out_reg[7]' (FDCE) to 'error[36].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[36].relu_deriv/out_reg[8]' (FDCE) to 'error[36].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[36].relu_deriv/out_reg[9]' (FDCE) to 'error[36].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[36].relu_deriv/out_reg[11]' (FDCE) to 'error[36].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[260].relu_deriv/out_reg[10]' (FDCE) to 'error[260].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[260].relu_deriv/out_reg[6]' (FDCE) to 'error[260].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[260].relu_deriv/out_reg[0]' (FDCE) to 'error[260].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[260].relu_deriv/out_reg[1]' (FDCE) to 'error[260].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[260].relu_deriv/out_reg[2]' (FDCE) to 'error[260].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[260].relu_deriv/out_reg[3]' (FDCE) to 'error[260].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[260].relu_deriv/out_reg[4]' (FDCE) to 'error[260].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[260].relu_deriv/out_reg[5]' (FDCE) to 'error[260].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[260].relu_deriv/out_reg[7]' (FDCE) to 'error[260].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[260].relu_deriv/out_reg[8]' (FDCE) to 'error[260].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[260].relu_deriv/out_reg[9]' (FDCE) to 'error[260].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[260].relu_deriv/out_reg[11]' (FDCE) to 'error[260].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[223].relu_deriv/out_reg[10]' (FDCE) to 'error[223].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[223].relu_deriv/out_reg[6]' (FDCE) to 'error[223].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[223].relu_deriv/out_reg[0]' (FDCE) to 'error[223].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[223].relu_deriv/out_reg[1]' (FDCE) to 'error[223].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[223].relu_deriv/out_reg[2]' (FDCE) to 'error[223].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[223].relu_deriv/out_reg[3]' (FDCE) to 'error[223].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[223].relu_deriv/out_reg[4]' (FDCE) to 'error[223].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[223].relu_deriv/out_reg[5]' (FDCE) to 'error[223].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[223].relu_deriv/out_reg[7]' (FDCE) to 'error[223].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[223].relu_deriv/out_reg[8]' (FDCE) to 'error[223].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[223].relu_deriv/out_reg[9]' (FDCE) to 'error[223].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[223].relu_deriv/out_reg[11]' (FDCE) to 'error[223].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[265].relu_deriv/out_reg[10]' (FDCE) to 'error[265].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[265].relu_deriv/out_reg[6]' (FDCE) to 'error[265].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[265].relu_deriv/out_reg[0]' (FDCE) to 'error[265].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[265].relu_deriv/out_reg[1]' (FDCE) to 'error[265].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[265].relu_deriv/out_reg[2]' (FDCE) to 'error[265].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[265].relu_deriv/out_reg[3]' (FDCE) to 'error[265].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[265].relu_deriv/out_reg[4]' (FDCE) to 'error[265].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[265].relu_deriv/out_reg[5]' (FDCE) to 'error[265].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[265].relu_deriv/out_reg[7]' (FDCE) to 'error[265].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[265].relu_deriv/out_reg[8]' (FDCE) to 'error[265].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[265].relu_deriv/out_reg[9]' (FDCE) to 'error[265].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[265].relu_deriv/out_reg[11]' (FDCE) to 'error[265].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[30].relu_deriv/out_reg[10]' (FDCE) to 'error[30].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[30].relu_deriv/out_reg[6]' (FDCE) to 'error[30].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[30].relu_deriv/out_reg[0]' (FDCE) to 'error[30].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[30].relu_deriv/out_reg[1]' (FDCE) to 'error[30].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[30].relu_deriv/out_reg[2]' (FDCE) to 'error[30].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[30].relu_deriv/out_reg[3]' (FDCE) to 'error[30].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[30].relu_deriv/out_reg[4]' (FDCE) to 'error[30].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[30].relu_deriv/out_reg[5]' (FDCE) to 'error[30].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[30].relu_deriv/out_reg[7]' (FDCE) to 'error[30].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[30].relu_deriv/out_reg[8]' (FDCE) to 'error[30].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[30].relu_deriv/out_reg[9]' (FDCE) to 'error[30].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[30].relu_deriv/out_reg[11]' (FDCE) to 'error[30].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[28].relu_deriv/out_reg[10]' (FDCE) to 'error[28].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[28].relu_deriv/out_reg[6]' (FDCE) to 'error[28].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[28].relu_deriv/out_reg[0]' (FDCE) to 'error[28].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[28].relu_deriv/out_reg[1]' (FDCE) to 'error[28].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[28].relu_deriv/out_reg[2]' (FDCE) to 'error[28].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[28].relu_deriv/out_reg[3]' (FDCE) to 'error[28].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[28].relu_deriv/out_reg[4]' (FDCE) to 'error[28].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[28].relu_deriv/out_reg[5]' (FDCE) to 'error[28].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[28].relu_deriv/out_reg[7]' (FDCE) to 'error[28].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[28].relu_deriv/out_reg[8]' (FDCE) to 'error[28].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[28].relu_deriv/out_reg[9]' (FDCE) to 'error[28].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[28].relu_deriv/out_reg[11]' (FDCE) to 'error[28].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[259].relu_deriv/out_reg[10]' (FDCE) to 'error[259].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[259].relu_deriv/out_reg[6]' (FDCE) to 'error[259].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[259].relu_deriv/out_reg[0]' (FDCE) to 'error[259].relu_deriv/out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'error[259].relu_deriv/out_reg[1]' (FDCE) to 'error[259].relu_deriv/out_reg[12]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:31 ; elapsed = 00:03:54 . Memory (MB): peak = 6732.605 ; gain = 1306.535 ; free physical = 26990 ; free virtual = 45694
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:45 ; elapsed = 00:04:10 . Memory (MB): peak = 7167.184 ; gain = 1741.113 ; free physical = 26571 ; free virtual = 45317
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:05:15 ; elapsed = 00:05:43 . Memory (MB): peak = 8160.176 ; gain = 2734.105 ; free physical = 25524 ; free virtual = 44296
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB1`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB1' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB3`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB3' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB12`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB12' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB22`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB22' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB25`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB25' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB28`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB28' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB35`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB35' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB40`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB40' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB41`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB41' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB45`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB45' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB46`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB46' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB50`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB50' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule_GT5`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule_GT5' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule_GT2`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule_GT2' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule_GT4`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule_GT4' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB0_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB0_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB2_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB2_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB4_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB4_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB5_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB5_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB6_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB6_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB7_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB7_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB8_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB8_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB9_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB9_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB10_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB10_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB11_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB11_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB13_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB13_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB14_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB14_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+RETIMING: forward move fails for register i_15/error[342].relu_deriv/out_reg[12] along load instance i_15/i_187 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[342].relu_deriv/out_reg[12] along load instance i_15/i_190 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[333].relu_deriv/out_reg[12] along load instance i_15/i_1112 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[333].relu_deriv/out_reg[12] along load instance i_15/i_1115 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[60].relu_deriv/out_reg[12] along load instance i_15/i_475 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[60].relu_deriv/out_reg[12] along load instance i_15/i_478 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[341].relu_deriv/out_reg[12] along load instance i_15/i_126 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[341].relu_deriv/out_reg[12] along load instance i_15/i_129 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[80].relu_deriv/out_reg[12] along load instance i_15/i_2745 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[80].relu_deriv/out_reg[12] along load instance i_15/i_2748 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[61].relu_deriv/out_reg[12] along load instance i_15/i_619 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[61].relu_deriv/out_reg[12] along load instance i_15/i_622 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[59].relu_deriv/out_reg[12] along load instance i_15/i_65 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[59].relu_deriv/out_reg[12] along load instance i_15/i_68 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[85].relu_deriv/out_reg[12] along load instance i_15/i_2867 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[85].relu_deriv/out_reg[12] along load instance i_15/i_2870 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[417].relu_deriv/out_reg[12] along load instance i_15/i_929 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[417].relu_deriv/out_reg[12] along load instance i_15/i_932 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[416].relu_deriv/out_reg[12] along load instance i_15/i_990 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[416].relu_deriv/out_reg[12] along load instance i_15/i_993 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[78].relu_deriv/out_reg[12] along load instance i_15/i_4 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[78].relu_deriv/out_reg[12] along load instance i_15/i_7 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[415].relu_deriv/out_reg[12] along load instance i_15/i_1051 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[415].relu_deriv/out_reg[12] along load instance i_15/i_1054 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[76].relu_deriv/out_reg[12] along load instance i_15/i_3072 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[76].relu_deriv/out_reg[12] along load instance i_15/i_3075 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[62].relu_deriv/out_reg[12] along load instance i_15/i_1483 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[62].relu_deriv/out_reg[12] along load instance i_15/i_1486 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[339].relu_deriv/out_reg[12] along load instance i_15/i_1422 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[339].relu_deriv/out_reg[12] along load instance i_15/i_1425 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[63].relu_deriv/out_reg[12] along load instance i_15/i_3133 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[63].relu_deriv/out_reg[12] along load instance i_15/i_3136 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[334].relu_deriv/out_reg[12] along load instance i_15/i_2020 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[334].relu_deriv/out_reg[12] along load instance i_15/i_2023 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[338].relu_deriv/out_reg[12] along load instance i_15/i_1959 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[338].relu_deriv/out_reg[12] along load instance i_15/i_1962 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[335].relu_deriv/out_reg[12] along load instance i_15/i_3255 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[335].relu_deriv/out_reg[12] along load instance i_15/i_3258 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[354].relu_deriv/out_reg[12] along load instance i_15/i_3011 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[354].relu_deriv/out_reg[12] along load instance i_15/i_3014 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[282].relu_deriv/out_reg[12] along load instance i_15/i_2806 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[282].relu_deriv/out_reg[12] along load instance i_15/i_2809 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[344].relu_deriv/out_reg[12] along load instance i_15/i_3931 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[344].relu_deriv/out_reg[12] along load instance i_15/i_3934 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[77].relu_deriv/out_reg[12] along load instance i_15/i_3665 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[77].relu_deriv/out_reg[12] along load instance i_15/i_3668 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[86].relu_deriv/out_reg[12] along load instance i_15/i_6240 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[86].relu_deriv/out_reg[12] along load instance i_15/i_6243 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[74].relu_deriv/out_reg[12] along load instance i_15/i_3316 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[74].relu_deriv/out_reg[12] along load instance i_15/i_3319 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[88].relu_deriv/out_reg[12] along load instance i_15/i_8151 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[88].relu_deriv/out_reg[12] along load instance i_15/i_8154 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[65].relu_deriv/out_reg[12] along load instance i_15/i_4302 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[65].relu_deriv/out_reg[12] along load instance i_15/i_4305 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[57].relu_deriv/out_reg[12] along load instance i_15/i_3543 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[57].relu_deriv/out_reg[12] along load instance i_15/i_3546 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[84].relu_deriv/out_reg[12] along load instance i_15/i_248 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[84].relu_deriv/out_reg[12] along load instance i_15/i_251 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[337].relu_deriv/out_reg[12] along load instance i_15/i_3194 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[337].relu_deriv/out_reg[12] along load instance i_15/i_3197 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[82].relu_deriv/out_reg[12] along load instance i_15/i_3787 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[82].relu_deriv/out_reg[12] along load instance i_15/i_3790 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[345].relu_deriv/out_reg[12] along load instance i_15/i_3992 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[345].relu_deriv/out_reg[12] along load instance i_15/i_3995 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[346].relu_deriv/out_reg[12] along load instance i_15/i_5437 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[346].relu_deriv/out_reg[12] along load instance i_15/i_5440 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[356].relu_deriv/out_reg[12] along load instance i_15/i_7968 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[356].relu_deriv/out_reg[12] along load instance i_15/i_7971 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[408].relu_deriv/out_reg[12] along load instance i_15/i_4363 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[408].relu_deriv/out_reg[12] along load instance i_15/i_4366 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[73].relu_deriv/out_reg[12] along load instance i_15/i_3726 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[73].relu_deriv/out_reg[12] along load instance i_15/i_3729 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[72].relu_deriv/out_reg[12] along load instance i_15/i_5149 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[72].relu_deriv/out_reg[12] along load instance i_15/i_5152 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[71].relu_deriv/out_reg[12] along load instance i_15/i_5376 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[71].relu_deriv/out_reg[12] along load instance i_15/i_5379 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[407].relu_deriv/out_reg[12] along load instance i_15/i_5005 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[407].relu_deriv/out_reg[12] along load instance i_15/i_5008 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[406].relu_deriv/out_reg[12] along load instance i_15/i_5559 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[406].relu_deriv/out_reg[12] along load instance i_15/i_5562 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[56].relu_deriv/out_reg[12] along load instance i_15/i_3604 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[56].relu_deriv/out_reg[12] along load instance i_15/i_3607 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[70].relu_deriv/out_reg[12] along load instance i_15/i_5498 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[70].relu_deriv/out_reg[12] along load instance i_15/i_5501 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[69].relu_deriv/out_reg[12] along load instance i_15/i_5764 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[69].relu_deriv/out_reg[12] along load instance i_15/i_5767 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[405].relu_deriv/out_reg[12] along load instance i_15/i_6384 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[405].relu_deriv/out_reg[12] along load instance i_15/i_6387 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[404].relu_deriv/out_reg[12] along load instance i_15/i_6445 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[404].relu_deriv/out_reg[12] along load instance i_15/i_6448 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[331].relu_deriv/out_reg[12] along load instance i_15/i_5703 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[331].relu_deriv/out_reg[12] along load instance i_15/i_5706 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[402].relu_deriv/out_reg[12] along load instance i_15/i_7004 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[402].relu_deriv/out_reg[12] along load instance i_15/i_7007 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[401].relu_deriv/out_reg[12] along load instance i_15/i_7065 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[401].relu_deriv/out_reg[12] along load instance i_15/i_7068 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[68].relu_deriv/out_reg[12] along load instance i_15/i_7209 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[68].relu_deriv/out_reg[12] along load instance i_15/i_7212 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[400].relu_deriv/out_reg[12] along load instance i_15/i_7270 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[400].relu_deriv/out_reg[12] along load instance i_15/i_7273 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[382].relu_deriv/out_reg[12] along load instance i_15/i_7536 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[382].relu_deriv/out_reg[12] along load instance i_15/i_7539 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[67].relu_deriv/out_reg[12] along load instance i_15/i_7331 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[67].relu_deriv/out_reg[12] along load instance i_15/i_7334 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[399].relu_deriv/out_reg[12] along load instance i_15/i_7392 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[399].relu_deriv/out_reg[12] along load instance i_15/i_7395 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[384].relu_deriv/out_reg[12] along load instance i_15/i_7763 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[384].relu_deriv/out_reg[12] along load instance i_15/i_7766 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[385].relu_deriv/out_reg[12] along load instance i_15/i_8090 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[385].relu_deriv/out_reg[12] along load instance i_15/i_8093 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[66].relu_deriv/out_reg[12] along load instance i_15/i_7907 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[66].relu_deriv/out_reg[12] along load instance i_15/i_7910 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[87].relu_deriv/out_reg[12] along load instance i_15/i_8029 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_15/error[87].relu_deriv/out_reg[12] along load instance i_15/i_8032 due to (NOT ENOUGH REGISTERS)
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB15_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB15_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB17_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB17_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB19_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB19_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB20_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB20_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB21_tempName`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule__GB21_tempName' done
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `cnn_topmodule' done
+
+
+INFO: [Common 17-14] Message 'Synth 8-5816' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+RETIMING: forward move fails for register i_37/error[566].relu_deriv/out_reg[12] along load instance i_37/i_751 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[566].relu_deriv/out_reg[12] along load instance i_37/i_754 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[565].relu_deriv/out_reg[12] along load instance i_37/i_812 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[565].relu_deriv/out_reg[12] along load instance i_37/i_815 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[559].relu_deriv/out_reg[12] along load instance i_37/i_1205 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[559].relu_deriv/out_reg[12] along load instance i_37/i_1208 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[551].relu_deriv/out_reg[12] along load instance i_37/i_1598 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[551].relu_deriv/out_reg[12] along load instance i_37/i_1601 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[545].relu_deriv/out_reg[12] along load instance i_37/i_1659 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[545].relu_deriv/out_reg[12] along load instance i_37/i_1662 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[543].relu_deriv/out_reg[12] along load instance i_37/i_1720 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[543].relu_deriv/out_reg[12] along load instance i_37/i_1723 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[539].relu_deriv/out_reg[12] along load instance i_37/i_1781 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[539].relu_deriv/out_reg[12] along load instance i_37/i_1784 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[538].relu_deriv/out_reg[12] along load instance i_37/i_1842 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[538].relu_deriv/out_reg[12] along load instance i_37/i_1845 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[535].relu_deriv/out_reg[12] along load instance i_37/i_1903 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[535].relu_deriv/out_reg[12] along load instance i_37/i_1906 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[532].relu_deriv/out_reg[12] along load instance i_37/i_1964 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[532].relu_deriv/out_reg[12] along load instance i_37/i_1967 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[90].relu_deriv/out_reg[12] along load instance i_37/i_2108 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[90].relu_deriv/out_reg[12] along load instance i_37/i_2111 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[91].relu_deriv/out_reg[12] along load instance i_37/i_2169 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[91].relu_deriv/out_reg[12] along load instance i_37/i_2172 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[92].relu_deriv/out_reg[12] along load instance i_37/i_2230 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[92].relu_deriv/out_reg[12] along load instance i_37/i_2233 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[93].relu_deriv/out_reg[12] along load instance i_37/i_2291 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[93].relu_deriv/out_reg[12] along load instance i_37/i_2294 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[95].relu_deriv/out_reg[12] along load instance i_37/i_2435 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[95].relu_deriv/out_reg[12] along load instance i_37/i_2438 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[96].relu_deriv/out_reg[12] along load instance i_37/i_2496 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[96].relu_deriv/out_reg[12] along load instance i_37/i_2499 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[97].relu_deriv/out_reg[12] along load instance i_37/i_2557 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[97].relu_deriv/out_reg[12] along load instance i_37/i_2560 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[98].relu_deriv/out_reg[12] along load instance i_37/i_2618 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[98].relu_deriv/out_reg[12] along load instance i_37/i_2621 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[99].relu_deriv/out_reg[12] along load instance i_37/i_2679 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[99].relu_deriv/out_reg[12] along load instance i_37/i_2682 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[100].relu_deriv/out_reg[12] along load instance i_37/i_2740 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[100].relu_deriv/out_reg[12] along load instance i_37/i_2743 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[101].relu_deriv/out_reg[12] along load instance i_37/i_2801 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[101].relu_deriv/out_reg[12] along load instance i_37/i_2804 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[102].relu_deriv/out_reg[12] along load instance i_37/i_2862 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[102].relu_deriv/out_reg[12] along load instance i_37/i_2865 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[103].relu_deriv/out_reg[12] along load instance i_37/i_2923 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[103].relu_deriv/out_reg[12] along load instance i_37/i_2926 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[104].relu_deriv/out_reg[12] along load instance i_37/i_2984 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[104].relu_deriv/out_reg[12] along load instance i_37/i_2987 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[105].relu_deriv/out_reg[12] along load instance i_37/i_3045 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[105].relu_deriv/out_reg[12] along load instance i_37/i_3048 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[107].relu_deriv/out_reg[12] along load instance i_37/i_3106 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[107].relu_deriv/out_reg[12] along load instance i_37/i_3109 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[108].relu_deriv/out_reg[12] along load instance i_37/i_3167 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[108].relu_deriv/out_reg[12] along load instance i_37/i_3170 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[109].relu_deriv/out_reg[12] along load instance i_37/i_3228 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[109].relu_deriv/out_reg[12] along load instance i_37/i_3231 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[110].relu_deriv/out_reg[12] along load instance i_37/i_3289 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[110].relu_deriv/out_reg[12] along load instance i_37/i_3292 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[111].relu_deriv/out_reg[12] along load instance i_37/i_3350 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[111].relu_deriv/out_reg[12] along load instance i_37/i_3353 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[116].relu_deriv/out_reg[12] along load instance i_37/i_3411 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[116].relu_deriv/out_reg[12] along load instance i_37/i_3414 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[119].relu_deriv/out_reg[12] along load instance i_37/i_3472 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[119].relu_deriv/out_reg[12] along load instance i_37/i_3475 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[120].relu_deriv/out_reg[12] along load instance i_37/i_3533 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[120].relu_deriv/out_reg[12] along load instance i_37/i_3536 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[125].relu_deriv/out_reg[12] along load instance i_37/i_3594 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[125].relu_deriv/out_reg[12] along load instance i_37/i_3597 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[126].relu_deriv/out_reg[12] along load instance i_37/i_3655 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[126].relu_deriv/out_reg[12] along load instance i_37/i_3658 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[127].relu_deriv/out_reg[12] along load instance i_37/i_3716 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[127].relu_deriv/out_reg[12] along load instance i_37/i_3719 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[128].relu_deriv/out_reg[12] along load instance i_37/i_3777 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[128].relu_deriv/out_reg[12] along load instance i_37/i_3780 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[130].relu_deriv/out_reg[12] along load instance i_37/i_3838 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[130].relu_deriv/out_reg[12] along load instance i_37/i_3841 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[132].relu_deriv/out_reg[12] along load instance i_37/i_3899 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[132].relu_deriv/out_reg[12] along load instance i_37/i_3902 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[133].relu_deriv/out_reg[12] along load instance i_37/i_3960 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[133].relu_deriv/out_reg[12] along load instance i_37/i_3963 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[134].relu_deriv/out_reg[12] along load instance i_37/i_4021 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[134].relu_deriv/out_reg[12] along load instance i_37/i_4024 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[135].relu_deriv/out_reg[12] along load instance i_37/i_4082 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[135].relu_deriv/out_reg[12] along load instance i_37/i_4085 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[136].relu_deriv/out_reg[12] along load instance i_37/i_4143 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[136].relu_deriv/out_reg[12] along load instance i_37/i_4146 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[138].relu_deriv/out_reg[12] along load instance i_37/i_5615 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[138].relu_deriv/out_reg[12] along load instance i_37/i_5618 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[139].relu_deriv/out_reg[12] along load instance i_37/i_6091 due to (NOT ENOUGH REGISTERS)
+RETIMING: forward move fails for register i_37/error[139].relu_deriv/out_reg[12] along load instance i_37/i_6094 due to (NOT ENOUGH REGISTERS)
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:06:52 ; elapsed = 00:07:20 . Memory (MB): peak = 8172.102 ; gain = 2746.031 ; free physical = 22044 ; free virtual = 40811
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:07:17 ; elapsed = 00:07:45 . Memory (MB): peak = 8243.492 ; gain = 2817.422 ; free physical = 22028 ; free virtual = 40795
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:39 ; elapsed = 00:08:07 . Memory (MB): peak = 8243.492 ; gain = 2817.422 ; free physical = 22025 ; free virtual = 40793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:08:25 ; elapsed = 00:08:53 . Memory (MB): peak = 8243.492 ; gain = 2817.422 ; free physical = 22022 ; free virtual = 40790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:08:33 ; elapsed = 00:09:01 . Memory (MB): peak = 8243.492 ; gain = 2817.422 ; free physical = 22022 ; free virtual = 40790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:08:37 ; elapsed = 00:09:06 . Memory (MB): peak = 8243.492 ; gain = 2817.422 ; free physical = 22021 ; free virtual = 40789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:08:38 ; elapsed = 00:09:07 . Memory (MB): peak = 8243.492 ; gain = 2817.422 ; free physical = 22021 ; free virtual = 40789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+-------+
+|      |Cell   |Count  |
++------+-------+-------+
+|1     |CARRY8 |  15585|
+|2     |LUT1   |      1|
+|3     |LUT2   |  46548|
+|4     |LUT3   |  64895|
+|5     |LUT4   |  54261|
+|6     |LUT5   |  60695|
+|7     |LUT6   | 125475|
+|8     |MUXF7  |   1953|
+|9     |MUXF8  |    858|
+|10    |FDCE   |    737|
+|11    |FDPE   |      1|
+|12    |FDRE   |   7579|
++------+-------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:08:39 ; elapsed = 00:09:07 . Memory (MB): peak = 8243.492 ; gain = 2817.422 ; free physical = 22021 ; free virtual = 40789
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:08:12 ; elapsed = 00:08:49 . Memory (MB): peak = 8247.402 ; gain = 2027.363 ; free physical = 37935 ; free virtual = 56707
+Synthesis Optimization Complete : Time (s): cpu = 00:08:41 ; elapsed = 00:09:12 . Memory (MB): peak = 8247.402 ; gain = 2821.332 ; free physical = 37951 ; free virtual = 56698
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 8247.402 ; gain = 0.000 ; free physical = 37946 ; free virtual = 56692
+INFO: [Netlist 29-17] Analyzing 18396 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 8357.367 ; gain = 0.000 ; free physical = 37838 ; free virtual = 56585
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: c605172c
+INFO: [Common 17-83] Releasing license: Synthesis
+262 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:09:59 ; elapsed = 00:10:23 . Memory (MB): peak = 8357.367 ; gain = 3965.668 ; free physical = 37837 ; free virtual = 56585
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 21466.328; main = 5587.439; forked = 16178.076
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 36646.062; main = 8357.371; forked = 28402.566
+INFO: [Common 17-1381] The checkpoint '/home/develop/Vivado/CNNSAPA_10_30_11bit_sa/CNNSAPA_NEW.runs/sa11bit_1/cnn_topmodule.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:44 ; elapsed = 00:00:28 . Memory (MB): peak = 8429.402 ; gain = 72.035 ; free physical = 37744 ; free virtual = 56576
+INFO: [runtcl-4] Executing : report_utilization -file cnn_topmodule_utilization_synth.rpt -pb cnn_topmodule_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 30 15:35:42 2023...
