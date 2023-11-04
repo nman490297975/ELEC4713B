@@ -1,10 +1,11 @@
 `timescale 1ns / 1ps
+
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: Nicholas Manning and Niyana Yohannes
 // 
 // Create Date: 
-// Design Name: CNN_PA
+// Design Name: CNN_SA
 // Module Name: net
 // Project Name: Convolutional Adapter
 // Target Devices: 
@@ -20,64 +21,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 /*------------------------------------------------------------------------------
---  
---  Structure
+--  USYD Code Citation
 --
---  Admin
---  a. To Do
---  b. Design Notes
---
---  1. Define Constants
+--	The forward propgagtion logic was built off code by Jiong Si presented in Appendix A of https://digitalscholarship.unlv.edu/cgi/viewcontent.cgi?article=4849&context=thesesdissertations
+--	The backpropgation code was built off code for an MLP by Team-SDK-545 hosted by member Kais Kudrolli https://github.com/kkudrolli/Team-SDK-545
 --  
---  External (I/O)
---  2. Control Signals
---  3. Data Signals
---  
---  Internal
---  4. Control Signals / Constants
---  5. FP RAM
---  6. BP RAM
---  7. BP Calculation
+--  Niyana Yohannes was primarily responsible for the initial RTL and for the initial backpropgation logic.  Also primarily responsible for the SA adapter.
+--  Nicholas Manning was primarily responsible for the final design of the RTL adapter logic, introduction of cross-entropy, administration of the document, changes made after debugging to obtain a synthesizable and implementable design and for the PA adapter.
 --
---  Hardware Generation
---  8. Generate FP Units
---  9. Generate BP Units
---
---  FSM
---  10. FSM Logic
---  11. FSM Indexer
---  12. Reusable Offcuts
---  
 ------------------------------------------------------------------------------*/
-
-/*------------------------------------------------------------------------------
---  a. To Do:
---
---  X each on when finished.
---
---  RTL network 
---    [] load weights/biases in from files (main conv weights/biases)
---    [] load random zero mean weights/biases for Adapter (from testbench or from file)
---    [] load feature map (FMAP) input for serial adapter (ADAPT == 1)
---    [] Check control signals, RAM, BP calculation, generate FP, generate BP, FSM
---
---  Layers
---    [] SA (conv_neuron.sv + conv_adder.sv + conv_activation.sv)
---    
---  b. Design Notes:
---  
---  * Variables names: <backprop><name>_<LAYER_CODE>_<temp/inter>  eg. biases_OUT or bpWChange_OUT_inter
---  * Input type set to logic.  Consistent with tb for signal detection, should not affect synthesis.
---
---  Adapter 
---
---     Component         Dimensions                               Comment
---  * Control:          Separate control signals for SA and PA   (for debugging it's super obvious which adapter has been generated)
---  * Weights RAM:      KERNELS * IN_CHANNELS * 1 * 1            ([6][6] = 36 for SA, [6] = 6 for PA)
---  * Accum RAM:        KERNELS * WIDTH * HEIGHT                 (written to FMAP_CHANNELS number of times)
---  * Activation RAM:   KERNELS * WIDTH * HEIGHT     
---  
-------------------------------------------------------------------------------*/ 
       
 /*------------------------------------------------------------------------------
 --  1. Define Constants
